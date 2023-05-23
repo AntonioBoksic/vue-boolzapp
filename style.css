@@ -25,7 +25,15 @@
     border: blue 1px solid;
     display: flex;
     flex-direction: column;
+    /* flex in realtà nemmeno gli serve ma ho paura di levarlo :'( */
     
+}
+
+.container-interno-chat {
+    border: lightgreen 2px solid;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* SEZIONE CONTATTI */
