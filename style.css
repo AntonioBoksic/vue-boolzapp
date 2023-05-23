@@ -27,6 +27,32 @@
     
 }
 
+.contatti-utente {
+    width: 100%;
+    height: 7.5%;
+    border: orange solid 3px;
+}
+
+.contatti-notifiche {
+    width: 100%;
+    height: 7.5%;
+    border: orange solid 3px;
+    background-color: lightblue;
+}
+
+.contatti-cerca {
+    width: 100%;
+    height: 5%;
+    border: orange solid 3px;
+}
+
+.contatti-lista {
+    width: 100%;
+    height: 80%;
+    border: grey solid 3px;
+    overflow-y: scroll;
+}
+
 .chat-contatto {
     width: 100%;
     height: 7.5%;
