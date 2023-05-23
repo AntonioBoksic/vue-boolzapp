@@ -34,6 +34,8 @@
     height: 100%;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* SEZIONE CONTATTI */
@@ -199,6 +201,8 @@ input {
     color: grey;
 }
 
+/* chat */
+
 .chat{
     width: 100%;
     height: calc(100% - 150px);
@@ -207,7 +211,27 @@ input {
     background-image: url(img/sfondo\ whatsapp.jpg);
 }
 
-.chat-messaggio {
+.messaggio {
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: inline-block;
+    width: max-content;
+    max-width: 50%;
+    margin-bottom: 10px;
+}
+
+.messaggio.ricevuto {
+    background-color: white;
+    
+}
+
+.messaggio.inviato {
+    background-color: #d5f9ba;
+    margin-left: 50%;
+}
+
+/* chat footer */
+.chat-footer {
     width: 100%;
     height: 75px;
     border: orange solid 3px;
@@ -218,12 +242,12 @@ input {
 
 }
 
-.chat-messaggio input {
+.chat-footer input {
     width: 80%;
     height: 80%;
     border-radius: 6px;
 }
 
-.chat-messaggio i {
+.chat-footer i {
     color: #6a7275;
 }
