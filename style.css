@@ -164,11 +164,13 @@ input {
 
 .ultimo-messaggio {
     padding-left: 5px;
+    color: grey;
 }
 
 
 .contatti-ora-messaggio {
     align-self: flex-start;
+    color: grey
 }
 
 
@@ -186,6 +188,7 @@ input {
 
 .ultimo-accesso {
     padding-left: 5px;
+    color: grey;
 }
 
 .chat{
