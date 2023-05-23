@@ -6,24 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VUE Boolzapp</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
     <div class="container">
-        <!-- container contatti -->
+        <!-- container CONTATTI / PARTE SINISTRA -->
         <div class="container-contatti">
 
+            <!-- sezione utente  -->
             <div class="contatti-utente">
-                <h1>contatti-utente</h1>
+                <!-- avatar e nome -->
+                <div class="avatar-e-nome">
+                    <img src="" alt="avatar utente" class="avatar">
+                    <div class="nome-avatar">nome utente</div>
+                </div>
+
+                
+                <!-- icone -->
+                <div>
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                </div>
             </div>
 
+            <!-- sezione notifiche -->
             <div class="contatti-notifiche">
-                <h1>contatti-notifiche</h1>
+                <i class="fa-solid fa-bell-slash"></i>
+
+                <div class="notifiche-testo">
+                    <div class="ricevi-notifiche">ricevi notifiche di nuovi messaggi</div>
+                    <div class="attiva-notifiche">Attiva notifiche desktop</div>
+                </div>
             </div>
 
+            <!-- sezione cerca -->
             <div class="contatti-cerca">
-                <h1>contatti-cerca</h1>
+                <div class="search-bar"> 
+                    
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+
+
+                </div>
             </div>
 
             <div class="contatti-lista">
@@ -82,12 +111,28 @@
 
         </div>
 
-        <!-- CHAT /PARTE DESTRA -->
+        <!-- container CHAT / PARTE DESTRA -->
         <div class="container-messaggi">
 
             <!-- contatto con cui si chatta -->
             <div class="chat-contatto">
-                <h1>chat contatto</h1>
+                <!-- avatar e nome contatto aperto -->
+                <div class="avatar-e-nome">
+                    <img src="" alt="avatar cont" class="avatar">
+                    <div class="nome-e-ultimo-accesso">
+                    <div class="nome-avatar">nome contatto</div>
+                    <div class="ultimo-accesso">ultimo accesso</div>
+                    </div>
+                </div>
+
+                <!-- icone contatto aperto  -->
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                </div>
+
             </div>
 
             <!-- sezione chat -->
