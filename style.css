@@ -172,5 +172,18 @@ input {
     height: 7.5%;
     border: orange solid 3px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
+}
+
+.chat-messaggio input {
+    width: 80%;
+    height: 80%;
+    border-radius: 6px;
+}
+
+.chat-messaggio i {
+    color: #6a7275;
 }
