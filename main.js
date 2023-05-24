@@ -194,12 +194,15 @@ createApp({
             this.messageSent = {
                 date: '',
                 message: '',
-                status: 'sent'
-            }
-        },
-        getResponse() {
+                status: 'sent',
+            },
+            
             this.contacts[this.currentContactIndex].messages.push(this.messageResponse)
-        }
+
+        },
+        // getResponse() {
+            // this.contacts[this.currentContactIndex].messages.push(this.messageResponse)
+        // }
 
     },
 
