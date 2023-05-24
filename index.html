@@ -143,8 +143,9 @@
             <!-- sezione input -->
             <div class="chat-footer">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
-                <i class="fa-solid fa-microphone"></i>            </div>
+                <input @keyup.enter="sendMessage" v-model="messageSent.message" type="text" placeholder="Scrivi un messaggio">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
 
         </div>
 

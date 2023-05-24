@@ -4,6 +4,12 @@ createApp({
     data() {
         return {
             currentContactIndex : 0,
+            messageSent : {
+                date: '',
+                message: '',
+                status: 'sent'
+
+            },
             contacts: [
                 {
                     name: 'Michele',
@@ -174,6 +180,17 @@ createApp({
         selectContact(indice) {
             this.currentContactIndex = indice
             console.log(this.currentContactIndex)
+        },
+        sendMessage() {
+            // pusha messaggio in contacts(attivo).messages
+            this.contacts[this.currentContactIndex].messages.push(this.messageSent)
+            // svuota messaggio
+            this.messageSent = {
+                date: '',
+                message: '',
+                status: 'sent'
+
+            }
         }
 
     },
