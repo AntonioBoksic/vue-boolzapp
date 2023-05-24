@@ -10,6 +10,12 @@ createApp({
                 status: 'sent'
 
             },
+            messageResponse : {
+                date: '',
+                message: 'ok',
+                status: 'received'
+
+            },
             contacts: [
                 {
                     name: 'Michele',
@@ -189,8 +195,10 @@ createApp({
                 date: '',
                 message: '',
                 status: 'sent'
-
             }
+        },
+        getResponse() {
+            this.contacts[this.currentContactIndex].messages.push(this.messageResponse)
         }
 
     },
