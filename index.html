@@ -97,9 +97,9 @@
             <div class="chat-contatto">
                 <!-- avatar e nome contatto aperto -->
                 <div class="avatar-e-nome">
-                    <img src="" alt="avatar cont" class="avatar">
+                    <img :src="contacts[currentContactIndex].avatar" alt="avatar cont" class="avatar">
                     <div class="nome-e-ultimo-accesso">
-                    <div class="nome-avatar">nome contatto</div>
+                    <div class="nome-avatar">{{contacts[currentContactIndex].name}}</div>
                     <div class="ultimo-accesso">ultimo accesso</div>
                     </div>
                 </div>
@@ -123,15 +123,16 @@
                     <div class="messaggio ricevuto"> Tienimi aggiornato!</div>
                     <div class="messaggio inviato">Ok ;)</div> -->
 
-                    <pre class="messaggio inviato"   
+                    <div class="messaggio"   
                     
                     v-for="msg in contacts[currentContactIndex].messages"
 
+                    :class="msg.status === 'sent' ?  'inviato' : 'ricevuto'"
                     >
 
-                    <!-- :class="msg.status === 'sent' ?  'inviato' : 'ricevuto'"  -->
+                   
                     
-                    {{msg.message}}</pre>
+                    {{msg.message}}</div>
                     
                     <!-- <div class="messaggio inviato"></div> -->
 
