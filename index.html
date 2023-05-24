@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VUE Boolzapp</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" id="app">
         <!-- container CONTATTI / PARTE SINISTRA -->
+        <!--  -->
         <div class="container-contatti">
 
             <!-- sezione utente  -->
@@ -55,32 +56,41 @@
                 </div>
             </div>
 
-            <!-- sezione/lista contatti -->
-            <div class="contatti-lista">
+            <!-- sezione/lista item contatti -->
+            <ul class="contatti-lista">
 
-                <div class="contatti-contatto">
+                <!-- list item -->
+                <li 
+                v-for="(contact , index) in contacts"
+                class="contatti-lista-item"
+                @click="selectContact(index)"
+                >
                     <!-- avatar e nome -->
                     <div class="avatar-e-nome">
-                        <img src="" alt="avatar utente" class="avatar">
+
+                        <img :src="contact.avatar" alt="avatar utente" class="avatar">
+
                         <div class="nome-e-ultimo-messaggio">
-                            <div class="nome-avatar">nome contatto</div>
+                            <div class="nome-avatar">{{contact.name}}</div>
                             <div class="ultimo-messaggio">Ultimo messaggio inviato</div>
                         </div>
                         
 
                     </div>
     
-                    
                     <!-- ora messaggio -->
                     <div class="contatti-ora-messaggio">
                         12:00
                     </div>
-                </div>
-            </div>
+
+                </li>
+            </ul>
 
         </div>
 
+
         <!-- container CHAT / PARTE DESTRA -->
+        <!--  -->
         <div class="container-messaggi">
 
             <!-- contatto con cui si chatta -->
@@ -107,10 +117,23 @@
             <!-- sezione chat -->
             <div class="chat">
                 <div class="container-interno-chat">
-                    <div class="messaggio ricevuto"> come procede con il progetto? sei riuscito a finirlo??? Fammi sapere!</div>
+                    
+                    <!-- <div class="messaggio ricevuto"> come procede con il progetto? sei riuscito a finirlo??? Fammi sapere!</div>
                     <div class="messaggio inviato">eh insomma :D manca tutta la parte di logica, ma html e css almeno sono andati ;)</div>
                     <div class="messaggio ricevuto"> Tienimi aggiornato!</div>
-                    <div class="messaggio inviato">Ok ;)</div>
+                    <div class="messaggio inviato">Ok ;)</div> -->
+
+                    <pre class="messaggio inviato"   
+                    
+                    v-for="msg in contacts[currentContactIndex].messages"
+
+                    >
+
+                    <!-- :class="msg.status === 'sent' ?  'inviato' : 'ricevuto'"  -->
+                    
+                    {{msg.message}}</pre>
+                    
+                    <!-- <div class="messaggio inviato"></div> -->
 
 
                 </div>
