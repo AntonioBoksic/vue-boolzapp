@@ -134,17 +134,12 @@
                     <div class="messaggio inviato">Ok ;)</div> -->
 
                     <div class="messaggio"   
-                    
                     v-for="msg in contacts[currentContactIndex].messages"
-
                     :class="msg.status === 'sent' ?  'inviato' : 'ricevuto'"
                     >
-
-                   
-                    
-                    {{msg.message}}</div>
-                    
-                    <!-- <div class="messaggio inviato"></div> -->
+                    {{msg.message}}
+                    <span class="ora-messaggio" >{{msg.date}}</span>
+                    </div>
 
                 </div>
             </div>

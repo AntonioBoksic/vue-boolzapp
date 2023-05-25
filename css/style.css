@@ -218,6 +218,7 @@ input {
     width: max-content;
     max-width: 50%;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .messaggio.ricevuto {
@@ -227,6 +228,14 @@ input {
 .messaggio.inviato {
     background-color: #d5f9ba;
     margin-left: 50%;
+}
+
+.ora-messaggio{
+    color: grey;
+    font-size: 13px;
+    position: absolute;
+    right: 1%;
+    bottom: 0;
 }
 
 /* chat footer */

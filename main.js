@@ -21,7 +21,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: './img/avatar_1.png',
-                    stringToSearch: "",
+                    
                     visible: true,
                     messages: [
                         {
