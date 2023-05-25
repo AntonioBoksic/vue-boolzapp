@@ -3,6 +3,7 @@ const {createApp} = Vue
 createApp({
     data() {
         return {
+            stringToSearch: "",
             currentContactIndex : 0,
             messageSent : {
                 date: '',
@@ -20,6 +21,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: './img/avatar_1.png',
+                    stringToSearch: "",
                     visible: true,
                     messages: [
                         {
@@ -196,10 +198,15 @@ createApp({
                 message: '',
                 status: 'sent',
             },
-            
+
             this.contacts[this.currentContactIndex].messages.push(this.messageResponse)
 
         },
+
+        logStringToSearch() {
+        console.log(this.stringToSearch)
+        this.stringToSearch = ""
+        }
         // getResponse() {
             // this.contacts[this.currentContactIndex].messages.push(this.messageResponse)
         // }

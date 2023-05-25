@@ -50,8 +50,11 @@
                     
                     <i class="fa-solid fa-magnifying-glass"></i>
 
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
-
+                    <input type="text" 
+                    placeholder="Cerca o inizia una nuova chat"
+                    v-model="stringToSearch"
+                    @keyup.enter="logStringToSearch"
+                    >
 
                 </div>
             </div>
@@ -59,31 +62,38 @@
             <!-- sezione/lista item contatti -->
             <ul class="contatti-lista">
 
+                <!-- vif se nome contatto include la stringa -->
+                <!-- v-if="contact.name.includes("stringToSearch")" -->
                 <!-- list item -->
-                <li 
-                v-for="(contact , index) in contacts"
-                class="contatti-lista-item"
-                @click="selectContact(index)"
-                >
-                    <!-- avatar e nome -->
-                    <div class="avatar-e-nome">
+                <div v-for="(contact , index) in contacts">
 
-                        <img :src="contact.avatar" alt="avatar utente" class="avatar">
+                    <li 
+                    v-if="contact.name.includes(stringToSearch)"
+                    
+                    class="contatti-lista-item"
+                    @click="selectContact(index)"
+                    >
 
-                        <div class="nome-e-ultimo-messaggio">
-                            <div class="nome-avatar">{{contact.name}}</div>
-                            <div class="ultimo-messaggio">Ultimo messaggio inviato</div>
-                        </div>
+                            <!-- avatar e nome -->
+                            <div class="avatar-e-nome" >
+
+                                <img :src="contact.avatar" alt="avatar utente" class="avatar">
+
+                                <div class="nome-e-ultimo-messaggio">
+                                    <div class="nome-avatar">{{contact.name}}</div>
+                                    <div class="ultimo-messaggio">Ultimo messaggio inviato</div>
+                                </div>
+                                
+
+                            </div>
+            
+                            <!-- ora messaggio -->
+                            <div class="contatti-ora-messaggio">
+                                12:00
+                            </div>
                         
-
-                    </div>
-    
-                    <!-- ora messaggio -->
-                    <div class="contatti-ora-messaggio">
-                        12:00
-                    </div>
-
-                </li>
+                    </li>
+            </div>
             </ul>
 
         </div>
@@ -135,7 +145,6 @@
                     {{msg.message}}</div>
                     
                     <!-- <div class="messaggio inviato"></div> -->
-
 
                 </div>
             </div>
