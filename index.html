@@ -68,7 +68,7 @@
                 <div v-for="(contact , index) in contacts">
 
                     <li 
-                    v-if="contact.name.toLowerCase().includes(stringToSearch)"
+                    v-if="contact.name.toLowerCase().includes(stringToSearch.toLowerCase())"
                     
                     class="contatti-lista-item"
                     @click="selectContact(index)"
