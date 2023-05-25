@@ -198,8 +198,7 @@ createApp({
                 message: '',
                 status: 'sent',
             },
-
-            this.contacts[this.currentContactIndex].messages.push(this.messageResponse)
+            setTimeout(this.contacts[this.currentContactIndex].messages.push(this.messageResponse),2000)
 
         },
 
